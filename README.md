@@ -60,21 +60,35 @@ You can start editing the page by modifying `pages.js`. The page auto-updates as
 ![image](https://github.com/ramvermilion/nextjs-stock-app/assets/82430197/0c1adfb8-1479-4320-a56c-e51d48905b0a)
 
 ##  Google side Customization
+To create a Google Sheets API, you'll need to follow these steps:
 
-1. Create a Google Sheet
-    - Create a Google Sheet and add the data you want to display on the site. The first row of the sheet should contain the column names. The column names should match the keys in the `index.js` file.
-2. Share the Google Sheet
-    - After creating the Google Sheet, you will need to share it with the service account that you will be using to access the data (next step).
-3. Create a Service Account
-    - create a service account in the Google Cloud Console. This service account will be used to access the data in the Google Sheet. Make sure to grant the service account access to the Google Sheets API.
-4. Obtain credentials for your service account
-    - Create a service account key in the Google Cloud console and download the JSON file. This contains the credentials that will be used for above step 6.
-5. Add the credentials to your project
-    - Add the credentials JSON file to your project and add the path to the file as an environment variable. The name of the environment variable should be `GOOGLE_APPLICATION_CREDENTIALS`.
-6. Obtain the Google Sheet ID
-    - The Google Sheet ID can be obtained from the URL of the Google Sheet. The ID is the string between `/d/` and `/edi
-7. Add the Google Sheet ID to your project
-    - Add the Google Sheet ID as an environment variable. The name of the environment variable should be `GOOGLE_SHEET_ID`.
+1. **Enable the Google Sheets API:**
+   - Go to the Google API Console (https://console.developers.google.com/).
+   - Create a new project or select an existing project.
+   - In the sidebar, click on "Library" and search for "Google Sheets API".
+   - Click on "Google Sheets API" in the search results.
+   - Click the "Enable" button to enable the API for your project.
+
+2. **Create Credentials:**
+   - In the API Console, go to "Credentials" in the sidebar.
+   - Click on "Create credentials" and select "Service account".
+   - Enter a name for your service account, choose a role (e.g., Project > Editor), and click "Continue".
+   - Click "Done" to create the service account.
+   - Click on the service account you just created and navigate to the "Keys" tab.
+   - Click on "Add key" and choose "JSON" to download the JSON key file. This file contains your credentials.
+
+3. **Share Google Sheets with Service Account:**
+   - Open the Google Sheets file you want to access with the API.
+   - Share the file with the email address associated with the service account (found in the JSON key file).
+
+4. **Install Google APIs Client Library:**
+   - Install the Google APIs Client Library for your programming language (e.g., Node.js, Python, Java). You can find installation instructions and documentation on the Google Developers website.
+
+5. **Use the Google Sheets API in your Code:**
+   - Initialize the Google Sheets API client with your credentials.
+   - Use the client to interact with Google Sheets, such as reading, writing, or updating data in sheets.
+
+Replace `'path/to/your/credentials.json'` with the path to your downloaded JSON key file, and `'your-spreadsheet-id'` with the ID of the Google Sheets document you want to access.
 
 ## 🚀 Deploy
 
