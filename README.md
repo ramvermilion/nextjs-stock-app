@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Stock Market App using google-sheet-api as a database in Next.js 
 
-First, run the development server:
+## 🛠 Installation & Set Up
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Clone this repository
+
+   ```sh
+   git clone https://github.com/ramvermilion/nextjs-stock-app.git
+   ```
+
+2. Change directories
+
+   ```sh
+   cd nextjs-stock-app
+   ```
+
+3. Install dependencies
+
+   ```sh
+   npm install
+   ```
+
+4. Start the development server
+
+   ```sh
+   npm run dev
+   ```
+
+6. Create a .env and following the .env.example input some environment variables so that can run normally.
+
+   ```txt
+    GOOGLE_PRIVATE_KEY=""
+    GOOGLE_SERVICE_ACCOUNT_EMAIL=""
+    GOOGLE_SHEET_ID=""
+   ```
+
+## 🏗️ Building and Running for Production
+
+1. Generate a full static production build
+
+   ```sh
+    npm run build
+    ```
+
+2. Preview the site as it will appear once deployed
+
+   ```sh
+   npm run start
+   ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+##  Google side Customization
 
-## Learn More
+1. Create a Google Sheet
+    - Create a Google Sheet and add the data you want to display on the site. The first row of the sheet should contain the column names. The column names should match the keys in the `index.js` file.
+2. Share the Google Sheet
+    - After creating the Google Sheet, you will need to share it with the service account that you will be using to access the data (next step).
+3. Create a Service Account
+    - create a service account in the Google Cloud Console. This service account will be used to access the data in the Google Sheet. Make sure to grant the service account access to the Google Sheets API.
+4. Obtain credentials for your service account
+    - Create a service account key in the Google Cloud console and download the JSON file. This contains the credentials that will be used for above step 6.
+5. Add the credentials to your project
+    - Add the credentials JSON file to your project and add the path to the file as an environment variable. The name of the environment variable should be `GOOGLE_APPLICATION_CREDENTIALS`.
+6. Obtain the Google Sheet ID
+    - The Google Sheet ID can be obtained from the URL of the Google Sheet. The ID is the string between `/d/` and `/edi
+7. Add the Google Sheet ID to your project
+    - Add the Google Sheet ID as an environment variable. The name of the environment variable should be `GOOGLE_SHEET_ID`.
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Deploy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Vercel**  
+The easiest way to deploy the template is to use the [Vercel Platform](https://vercel.com) from the creators of Next.js. Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/timlrx/tailwind-nextjs-starter-blog)

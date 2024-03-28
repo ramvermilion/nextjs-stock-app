@@ -1,0 +1,29 @@
+.dashboard-container {
+  .dash-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    align-items: baseline;
+    h2 {
+      margin: 15px 0;
+    }
+  }
+  .stock-table-wrapper {
+    max-width: 100%;
+    margin: 10px;
+    th.ant-table-cell {
+      text-align: center !important;
+    }
+    td.ant-table-cell {
+      text-align: center;
+    }
+  }
+}
+
+//common css
+button.ant-btn {
+  background: #0c359e;
+  span {
+    color: #fff;
+  }
+}

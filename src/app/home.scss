@@ -1,0 +1,26 @@
+$boxShadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+.main-container {
+  max-width: 1200px;
+  overflow: auto;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  gap: 35px;
+  min-height: 450px;
+
+  .tab-container {
+    box-shadow: $boxShadow;
+    background: white;
+    border-radius: 10px;
+    padding: 10px 30px 0;
+    width: 100%;
+  }
+
+  .rightpanel-container {
+    box-shadow: $boxShadow;
+    background: white;
+    border-radius: 10px;
+    padding: 10px 30px 0;
+    max-height: 450px;
+  }
+}
