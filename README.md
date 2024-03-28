@@ -51,7 +51,13 @@
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+You can start editing the page by modifying `pages.js`. The page auto-updates as you edit the file.
+
+![image](https://github.com/ramvermilion/nextjs-stock-app/assets/82430197/4a58f62e-4c69-4a33-8640-b04a156b4c3c)
+
+![image](https://github.com/ramvermilion/nextjs-stock-app/assets/82430197/9219fdde-057b-4df7-98b3-ba6e4c774a53)
+
+![image](https://github.com/ramvermilion/nextjs-stock-app/assets/82430197/0c1adfb8-1479-4320-a56c-e51d48905b0a)
 
 ##  Google side Customization
 
